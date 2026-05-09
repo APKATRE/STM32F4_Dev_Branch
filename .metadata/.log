@@ -5709,3 +5709,21 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2026-05-09 20:17:18.757
 !MESSAGE Indexed 'I2C_LLD' (22 sources, 82 headers) in 7.2 sec: 5,046 declarations; 26,619 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0063%)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-05-09 22:13:55.256
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/AObuchow/Eclipse-Spectrum-Theme/updatesite/updatesite/content.xml.xz
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-05-09 22:13:55.557
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/AObuchow/Eclipse-Spectrum-Theme/updatesite/updatesite/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-05-09 22:13:59.927
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/AObuchow/Eclipse-Spectrum-Theme/updatesite/updatesite/artifacts.xml.xz
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2026-05-09 22:14:00.268
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/AObuchow/Eclipse-Spectrum-Theme/updatesite/updatesite/artifacts.jar
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-09 22:16:36.555
+!MESSAGE Indexed 'ADC_LLD' (22 sources, 82 headers) in 2.27 sec: 5,046 declarations; 26,619 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0063%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-09 22:52:31.438
+!MESSAGE Indexed 'ADC_LLD' (25 sources, 85 headers) in 0.875 sec: 5,631 declarations; 32,208 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0053%)

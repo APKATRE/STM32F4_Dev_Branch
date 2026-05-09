@@ -1,7 +1,46 @@
-20:25:26 **** Incremental Build of configuration Debug for project I2C_LLD ****
+23:15:38 **** Incremental Build of configuration Debug for project ADC_LLD ****
 make -j16 all 
-arm-none-eabi-size  I2C_LLD.elf 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:116:11: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  116 |           printf("adc raw count = %d\r\n", adc_value);
+      |           ^~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:116:11: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  116 |           printf("adc raw count = %d\r\n", adc_value);
+      |           ^~~~~~
+../Core/Src/main.c:116:11: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:116:36: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  116 |           printf("adc raw count = %d\r\n", adc_value);
+      |                                   ~^       ~~~~~~~~~
+      |                                    |       |
+      |                                    int     uint32_t {aka long unsigned int}
+      |                                   %ld
+arm-none-eabi-gcc -o "ADC_LLD.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\WorkSpace\ADC_LLD\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_LLD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC_LLD.elf
+ 
+arm-none-eabi-size  ADC_LLD.elf 
+arm-none-eabi-objdump -h -S ADC_LLD.elf  > "ADC_LLD.list"
    text	   data	    bss	    dec	    hex	filename
-  18704	    104	   2064	  20872	   5188	I2C_LLD.elf
+  34640	    468	   2052	  37160	   9128	ADC_LLD.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_LLD.list
+ 
+23:15:46 **** Incremental Build of configuration Debug for project ADC_LLD ****
+make -j16 all 
+arm-none-eabi-size  ADC_LLD.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34640	    468	   2052	  37160	   9128	ADC_LLD.elf
+Finished building: default.size.stdout
+ 
+23:16:11 **** Incremental Build of configuration Debug for project ADC_LLD ****
+make -j16 all 
+arm-none-eabi-size  ADC_LLD.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34640	    468	   2052	  37160	   9128	ADC_LLD.elf
 Finished building: default.size.stdout
  
