@@ -1,0 +1,10 @@
+17:47:24 **** Incremental Build of configuration Debug for project InstruCore_V0.0.0 ****
+make -j16 all 
+arm-none-eabi-size  InstruCore_V0.0.0.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14756	     12	   1756	  16524	   408c	InstruCore_V0.0.0.elf
+Finished building: default.size.stdout
+ 
+
+17:47:24 Build Finished. 0 errors, 0 warnings. (took 798ms)
+
