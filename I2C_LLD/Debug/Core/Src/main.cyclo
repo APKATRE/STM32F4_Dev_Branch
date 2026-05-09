@@ -1,0 +1,9 @@
+../Core/Src/main.c:66:5:_write	1
+../Core/Src/main.c:79:5:main	1
+../Core/Src/main.c:148:19:AT24C32_WriteByte	3
+../Core/Src/main.c:166:19:AT24C32_ReadByte	2
+../Core/Src/main.c:191:6:SystemClock_Config	4
+../Core/Src/main.c:245:13:MX_I2C1_Init	2
+../Core/Src/main.c:279:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:312:13:MX_GPIO_Init	1
+../Core/Src/main.c:352:6:Error_Handler	1
