@@ -5801,3 +5801,15 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2026-05-10 15:31:50.401
 !MESSAGE Indexed 'Freertos_Demo' (22 sources, 82 headers) in 8.6 sec: 5,046 declarations; 26,619 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0063%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-10 16:08:40.982
+!MESSAGE Indexed 'Freertos_Demo' (33 sources, 106 headers) in 1.15 sec: 8,033 declarations; 39,858 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-10 16:08:42.208
+!MESSAGE Indexed 'Freertos_Demo' (33 sources, 106 headers) in 0.978 sec: 8,033 declarations; 39,858 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-10 16:13:42.172
+!MESSAGE Indexed 'Freertos_Demo' (33 sources, 106 headers) in 0.911 sec: 8,033 declarations; 39,858 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-10 16:25:19.676
+!MESSAGE Indexed 'Freertos_Demo' (34 sources, 107 headers) in 0.954 sec: 8,043 declarations; 39,863 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0042%)

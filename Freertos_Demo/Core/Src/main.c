@@ -19,6 +19,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "cmsis_os.h"
+#include "rtos_task.h"
+#include "app_entry.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -44,19 +46,19 @@
 UART_HandleTypeDef huart2;
 
 /* Definitions for defaultTask */
-osThreadId_t defaultTaskHandle;
-const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityNormal,
-};
-/* Definitions for myTask02 */
-osThreadId_t myTask02Handle;
-const osThreadAttr_t myTask02_attributes = {
-  .name = "myTask02",
-  .stack_size = 128 * 4,
-  .priority = (osPriority_t) osPriorityLow,
-};
+//osThreadId_t defaultTaskHandle;
+//const osThreadAttr_t defaultTask_attributes = {
+//  .name = "defaultTask",
+//  .stack_size = 128 * 4,
+//  .priority = (osPriority_t) osPriorityNormal,
+//};
+///* Definitions for myTask02 */
+//osThreadId_t myTask02Handle;
+//const osThreadAttr_t myTask02_attributes = {
+//  .name = "myTask02",
+//  .stack_size = 128 * 4,
+//  .priority = (osPriority_t) osPriorityLow,
+//};
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -65,8 +67,7 @@ const osThreadAttr_t myTask02_attributes = {
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
-void StartDefaultTask(void *argument);
-void StartTask02(void *argument);
+
 
 /* USER CODE BEGIN PFP */
 
@@ -116,7 +117,7 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Init scheduler */
-  osKernelInitialize();
+  //osKernelInitialize();
 
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
@@ -136,10 +137,10 @@ int main(void)
 
   /* Create the thread(s) */
   /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+//  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
   /* creation of myTask02 */
-  myTask02Handle = osThreadNew(StartTask02, NULL, &myTask02_attributes);
+  //myTask02Handle = osThreadNew(StartTask02, NULL, &myTask02_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -150,16 +151,17 @@ int main(void)
   /* USER CODE END RTOS_EVENTS */
 
   /* Start scheduler */
-  osKernelStart();
+ // osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  app_start();
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  //start_schedular();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -293,37 +295,37 @@ static void MX_GPIO_Init(void)
   * @retval None
   */
 /* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void *argument)
-{
-  /* USER CODE BEGIN 5 */
-  /* Infinite loop */
-  for(;;)
-  {
-	  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
-	  printf("In StartDefaultTask \r\n");
-    osDelay(100);
-  }
-  /* USER CODE END 5 */
-}
-
-/* USER CODE BEGIN Header_StartTask02 */
-/**
-* @brief Function implementing the myTask02 thread.
-* @param argument: Not used
-* @retval None
-*/
-/* USER CODE END Header_StartTask02 */
-void StartTask02(void *argument)
-{
-  /* USER CODE BEGIN StartTask02 */
-  /* Infinite loop */
-  for(;;)
-  {
-	  printf("In Task2 \r\n");
-    osDelay(550);
-  }
-  /* USER CODE END StartTask02 */
-}
+//void StartDefaultTask(void *argument)
+//{
+//  /* USER CODE BEGIN 5 */
+//  /* Infinite loop */
+//  for(;;)
+//  {
+//	  HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+//	  printf("In StartDefaultTask \r\n");
+//    osDelay(100);
+//  }
+//  /* USER CODE END 5 */
+//}
+//
+///* USER CODE BEGIN Header_StartTask02 */
+///**
+//* @brief Function implementing the myTask02 thread.
+//* @param argument: Not used
+//* @retval None
+//*/
+///* USER CODE END Header_StartTask02 */
+//void StartTask02(void *argument)
+//{
+//  /* USER CODE BEGIN StartTask02 */
+//  /* Infinite loop */
+//  for(;;)
+//  {
+//	  printf("In Task2 \r\n");
+//    osDelay(550);
+//  }
+//  /* USER CODE END StartTask02 */
+//}
 
 /**
   * @brief  This function is executed in case of error occurrence.

@@ -1,0 +1,12 @@
+/*
+ * rtos_task.h
+ *
+ *  Created on: May 10, 2026
+ *      Author: Aditya
+ */
+
+#ifndef RTOS_CORE_RTOS_TASK_H_
+#define RTOS_CORE_RTOS_TASK_H_
+#include "cmsis_os.h"
+extern void start_schedular(void);
+#endif /* RTOS_CORE_RTOS_TASK_H_ */
