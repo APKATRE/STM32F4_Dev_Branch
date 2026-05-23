@@ -117,7 +117,7 @@ int main(void)
       {
     	  CAN_Send_TestMessage();
 	         //HAL_UART_Transmit(&huart2, (uint8_t*)msg1, strlen(msg), 1000);
-    	         HAL_Delay(2000);
+    	         HAL_Delay(100);
 
       }
   /* USER CODE END 3 */
@@ -129,9 +129,9 @@ void CAN_Filter_Config(void)
     filter.FilterBank = 0;
     filter.FilterMode = CAN_FILTERMODE_IDMASK;
     filter.FilterScale = CAN_FILTERSCALE_32BIT;
-    filter.FilterIdHigh = (0x223<<5);
+    filter.FilterIdHigh = (0x000<<5);
     filter.FilterIdLow  = 0x0000;
-    filter.FilterMaskIdHigh = (0x7FF << 5);;
+    filter.FilterMaskIdHigh = (0x000 << 5);;
     filter.FilterMaskIdLow  = 0x0000;
     filter.FilterFIFOAssignment = CAN_FILTER_FIFO0;
     filter.FilterActivation = ENABLE;
@@ -392,7 +392,7 @@ void CAN_Send_TestMessage(void)
     uint32_t mailbox;
     uint8_t data[8] = {0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88};
 
-    txHeader.StdId = 0x123;
+    txHeader.StdId = 0x500;
     txHeader.IDE = CAN_ID_STD;
     txHeader.RTR = CAN_RTR_DATA;
     txHeader.DLC = 8;

@@ -474,8 +474,8 @@ int main(void)
  80005e6:	2300      	movs	r3, #0
  80005e8:	70fb      	strb	r3, [r7, #3]
   // Write 0xAB to address 0x0010
-  AT24C32_WriteByte(0x0010, 0x55);
- 80005ea:	2155      	movs	r1, #85	@ 0x55
+  AT24C32_WriteByte(0x0010, 0xA0);
+ 80005ea:	21a0      	movs	r1, #160	@ 0xa0
  80005ec:	2010      	movs	r0, #16
  80005ee:	f000 f82b 	bl	8000648 <AT24C32_WriteByte>
   HAL_Delay(5); // EEPROM write delay

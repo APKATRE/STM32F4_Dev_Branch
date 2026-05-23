@@ -1,4 +1,4 @@
-23:26:02 **** Incremental Build of configuration Debug for project ADC_LLD ****
+19:58:29 **** Incremental Build of configuration Debug for project ADC_LLD ****
 make -j16 all 
 arm-none-eabi-size  ADC_LLD.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  ADC_LLD.elf
 Finished building: default.size.stdout
  
 
-23:26:02 Build Finished. 0 errors, 0 warnings. (took 257ms)
+19:58:29 Build Finished. 0 errors, 0 warnings. (took 246ms)
 

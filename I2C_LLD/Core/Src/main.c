@@ -106,7 +106,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   uint8_t value=0;
   // Write 0xAB to address 0x0010
-  AT24C32_WriteByte(0x0010, 0x55);
+  AT24C32_WriteByte(0x0010, 0xA0);
   HAL_Delay(5); // EEPROM write delay
 
   // Read back from 0x0010

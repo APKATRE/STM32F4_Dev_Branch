@@ -1,0 +1,14 @@
+../Core/Src/main.c:71:5:_write	1
+../Core/Src/main.c:83:5:main	1
+../Core/Src/main.c:135:6:SystemClock_Config	4
+../Core/Src/main.c:189:13:MX_CAN1_Init	2
+../Core/Src/main.c:226:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:259:13:MX_GPIO_Init	1
+../Core/Src/main.c:292:6:CAN_Send_Test	1
+../Core/Src/main.c:308:6:CAN_Filter_Config	2
+../Core/Src/main.c:328:6:CAN_Start	3
+../Core/Src/main.c:337:19:CAN_Send	2
+../Core/Src/main.c:357:6:HAL_CAN_RxFifo0MsgPendingCallback	3
+../Core/Src/main.c:375:6:CAN_CheckErrors	9
+../Core/Src/main.c:390:6:CAN_Send_TestMessage	2
+../Core/Src/main.c:413:6:Error_Handler	1

@@ -26,6 +26,8 @@ const osThreadAttr_t myTask02_attributes = {
   .priority = (osPriority_t) osPriorityLow,
 };
 
+
+
 void start_schedular(void)
 {
 	 osKernelInitialize();
@@ -70,7 +72,7 @@ void StartTask02(void *argument)
   for(;;)
   {
 	  printf("In Task2 \r\n");
-    osDelay(550);
+	  osDelayUntil(550);
   }
   /* USER CODE END StartTask02 */
 }
